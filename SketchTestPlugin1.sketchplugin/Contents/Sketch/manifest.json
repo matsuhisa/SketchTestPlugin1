@@ -1,0 +1,27 @@
+{
+  "author" : "author",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "Test sketch plugin",
+      "identifier" : "script1"
+    },
+  ],
+  "menu": {
+    "items": [
+      {
+				"title": "menu name",
+				"items": [
+					"script1"
+				],
+			}
+    ],
+  },
+  "identifier" : "com.example.sketch.author",
+  "version" : "1.0",
+  "description" : "Test sketch plugin",
+  "authorEmail" : "mail@example.com",
+  "name" : "Test sketch plugin"
+}

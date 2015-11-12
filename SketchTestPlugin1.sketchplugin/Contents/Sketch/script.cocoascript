@@ -1,0 +1,6 @@
+@import "library.cocoascript";
+
+var onRun = function(context) {
+  var documentName = context.document.displayName();
+  log('The current document is named: ' + documentName);
+};
