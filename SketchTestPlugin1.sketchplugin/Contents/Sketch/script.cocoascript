@@ -3,4 +3,15 @@
 var onRun = function(context) {
   var documentName = context.document.displayName();
   log('The current document is named: ' + documentName);
+
+  var selection = context.selection
+
+  log([selection count]);
+
+  for (var i = 0, l = [selection count]; i < l; i++) {
+    var layer = selection[i];
+    var string_value = "日本語です";
+
+    [layer setStringValue: string_value];
+  }
 };
