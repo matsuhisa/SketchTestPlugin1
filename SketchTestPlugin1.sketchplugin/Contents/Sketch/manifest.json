@@ -1,5 +1,5 @@
 {
-  "author" : "author",
+  "author" : "matsuhisa.hironobu",
   "commands" : [
     {
       "script" : "script.cocoascript",
@@ -9,7 +9,15 @@
       "identifier" : "script1"
     },
 
-		{
+    {
+      "script" : "random_test.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "RandomTest",
+      "identifier" : "script3"
+    },
+
+    {
       "script" : "images.cocoascript",
       "handler" : "onRun",
       "shortcut" : "",
@@ -21,17 +29,25 @@
   "menu": {
     "items": [
       {
-				"title": "menu name",
-				"items": [
-					"script1"
-				],
-			},
-			{
-				"title": "menu images",
-				"items": [
-					"script2"
-				],
-			}
+        "title": "Japanease",
+        "items": [
+          "script1"
+        ],
+      },
+
+      {
+        "title": "Japanease Random",
+        "items": [
+          "script3"
+        ],
+      },
+
+      {
+        "title": "Set image",
+        "items": [
+          "script2"
+        ],
+      }
     ],
   },
   "identifier" : "com.example.sketch.author",
