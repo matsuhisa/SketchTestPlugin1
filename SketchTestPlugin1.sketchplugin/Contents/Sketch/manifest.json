@@ -10,6 +10,14 @@
     },
 
     {
+      "script" : "images.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "Photos",
+      "identifier" : "script2"
+    },
+
+    {
       "script" : "random_test.cocoascript",
       "handler" : "onRun",
       "shortcut" : "",
@@ -18,12 +26,13 @@
     },
 
     {
-      "script" : "images.cocoascript",
+      "script" : "revew_average_star.cocoascript",
       "handler" : "onRun",
       "shortcut" : "",
-      "name" : "Photos",
-      "identifier" : "script2"
+      "name" : "Revew average",
+      "identifier" : "script4"
     },
+
   ],
 
   "menu": {
@@ -43,6 +52,13 @@
       },
 
       {
+        "title": "Revew average",
+        "items": [
+          "script4"
+        ],
+      },
+
+      {
         "title": "Set image",
         "items": [
           "script2"
@@ -50,6 +66,7 @@
       }
     ],
   },
+
   "identifier" : "com.example.sketch.author",
   "version" : "1.0",
   "description" : "Test sketch plugin",
