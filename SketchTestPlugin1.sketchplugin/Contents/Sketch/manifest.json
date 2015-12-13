@@ -8,13 +8,28 @@
       "name" : "Test sketch plugin",
       "identifier" : "script1"
     },
+
+		{
+      "script" : "images.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "Photos",
+      "identifier" : "script2"
+    },
   ],
+
   "menu": {
     "items": [
       {
 				"title": "menu name",
 				"items": [
 					"script1"
+				],
+			},
+			{
+				"title": "menu images",
+				"items": [
+					"script2"
 				],
 			}
     ],

@@ -1,0 +1,38 @@
+@import "library.cocoascript";
+
+var onRun = function(context) {
+  var selection = context.selection
+  var dataPath = 'data/photos/my-photos/';
+  var photosPath = '/Users/matsuhisahironobu/Library/Containers/com.bohemiancoding.sketch3/Data/Library/Application Support/com.bohemiancoding.sketch3/Plugins/SketchTestPlugin1/data/photo';
+
+  var fileManager = [NSFileManager defaultManager];
+
+  //var scriptPath = context.scriptPath;
+  //var pluginFolder = scriptPath.match(/Plugins\/([\w -])*/)[0] + "/";
+  //var sketchPluginsPath = scriptPath.replace(/Plugins\/([\w -])*.sketchplugin$/, "");
+  //var imagesPath =  sketchPluginsPath + pluginFolder + dataPath;
+  //log("sketchPluginsPath:1:" + sketchPluginsPath + pluginFolder);
+  //log("sketchPluginsPath:2:" + sketchPluginsPath);
+  //var imagesFileNames = [fileManager contentsOfDirectoryAtPath:photosPath error:nil];
+  //var imageCount = [imagesFileNames count] -1;
+
+  //log(imagesFileNames);
+  var selections = [selection count];
+  log(selections);
+
+  for(var i = 0; i < [selection count]; i++){
+var imagePath = photosPath + "/1.jpg";
+var image = [[NSImage alloc] initWithContentsOfFile:imagePath];
+var layer = selection[i];
+
+  log(i);
+
+    if([layer class] == MSShapeGroup){
+      var fill = layer.style().fills().firstObject();
+      fill.setFillType(4);
+      var coll = layer.style().fills().firstObject().documentData().images();
+      [fill setPatternImage:image collection:coll]
+      layer.style().fills().firstObject().setPatternFillType(1);
+    }
+  }
+};
