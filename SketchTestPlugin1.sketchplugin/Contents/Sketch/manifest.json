@@ -32,6 +32,14 @@
       "name" : "1〜5段階の★を設定",
       "identifier" : "script4"
     },
+
+    {
+      "script" : "between.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "80〜350の値を返す",
+      "identifier" : "script5"
+    },
   ],
 
   "menu": {
@@ -39,7 +47,7 @@
       {
         "title": "テキストの設定",
         "items": [
-          "script1", "script3"
+          "script1", "script3", "script5"
         ],
       },
 
