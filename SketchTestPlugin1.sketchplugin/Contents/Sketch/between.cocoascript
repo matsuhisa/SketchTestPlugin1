@@ -1,7 +1,6 @@
 @import "library.cocoascript";
 
 var onRun = function(context) {
-  var documentName = context.document.displayName();
   var selection = context.selection
 	var max = 350;
   var min = 80;
