@@ -6,20 +6,13 @@ var onRun = function(context) {
 
   for (var i = 0, l = [selection count]; i < l; i++) {
     var layer = selection[i];
-    var string_value1 = "日本語です";
-    var string_value2 = "日本語です";
     var color = MSColor.colorWithRed_green_blue_alpha(1.0,0.4,0.0,1.0);
-		var color2 = MSColor.colorWithRed_green_blue_alpha(0.4,1.0,0.0,1.0);
 
-    log([layer class]);
+    layer.fontSize = 24;
+    layer.textColor = color;
+    [layer setFont:[NSFont fontWithName:@"YuGothic" size:24]];
+    [layer setStringValue: string_value];
 
-    string_value1.textColor = color2;
-    var string_value = string_value1 + string_value2;
-    layer.stringValue = "ほげほげ";
-
-    //layer.fontSize = 24;
-    //layer.textColor = color;
-    //[layer setFont:[NSFont fontWithName:@"YuGothic" size:24]];
-    //[layer setStringValue: string_value];
+    layer.stringValue = "日本語です";
   }
 };

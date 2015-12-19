@@ -1,0 +1,13 @@
+@import "library.cocoascript";
+@import '../../../data/areas/tokyo.js'
+
+var onRun = function(context) {
+  var documentName = context.document.displayName();
+  var selection = context.selection
+
+  for (var i = 0, l = [selection count]; i < l; i++) {
+    var layer = selection[i];
+    layer.stringValue = data[Math.floor(Math.random() * data.length)];
+  }
+
+};

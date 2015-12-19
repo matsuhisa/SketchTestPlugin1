@@ -5,8 +5,32 @@
       "script" : "script.cocoascript",
       "handler" : "onRun",
       "shortcut" : "",
-      "name" : "Test sketch plugin",
+      "name" : "テキスト入力のサンプル",
       "identifier" : "script1"
+    },
+
+    {
+      "script" : "random_text.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "名前をランダム",
+      "identifier" : "script8"
+    },
+
+    {
+      "script" : "random_tokyo.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "東京の地名をランダム",
+      "identifier" : "script3"
+    },
+
+    {
+      "script" : "random_shop.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "店名をランダム",
+      "identifier" : "script7"
     },
 
     {
@@ -18,11 +42,11 @@
     },
 
     {
-      "script" : "random_test.cocoascript",
+      "script" : "between.cocoascript",
       "handler" : "onRun",
-      "shortcut" : "名前をランダムで設定",
-      "name" : "RandomTest",
-      "identifier" : "script3"
+      "shortcut" : "",
+      "name" : "80〜350の値を返す",
+      "identifier" : "script5"
     },
 
     {
@@ -40,14 +64,6 @@
       "name" : "1.00〜5.00の値を設定",
       "identifier" : "script6"
     },
-
-    {
-      "script" : "between.cocoascript",
-      "handler" : "onRun",
-      "shortcut" : "",
-      "name" : "80〜350の値を返す",
-      "identifier" : "script5"
-    },
   ],
 
   "menu": {
@@ -55,7 +71,7 @@
       {
         "title": "テキストの設定",
         "items": [
-          "script1", "script3", "script5"
+          "script1", "script8", "script3", "script7"
         ],
       },
 
@@ -69,7 +85,7 @@
       {
         "title": "レビューの設定",
         "items": [
-          "script4", "script6"
+          "script4", "script5", "script6"
         ],
       }
     ],
