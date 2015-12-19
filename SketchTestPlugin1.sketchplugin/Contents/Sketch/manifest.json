@@ -34,6 +34,14 @@
     },
 
     {
+      "script" : "revew_average.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "1.00〜5.00の値を設定",
+      "identifier" : "script6"
+    },
+
+    {
       "script" : "between.cocoascript",
       "handler" : "onRun",
       "shortcut" : "",
@@ -61,7 +69,7 @@
       {
         "title": "レビューの設定",
         "items": [
-          "script4"
+          "script4", "script6"
         ],
       }
     ],

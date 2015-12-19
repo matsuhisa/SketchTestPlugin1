@@ -1,0 +1,14 @@
+@import "library.cocoascript";
+
+var onRun = function(context) {
+  var documentName = context.document.displayName();
+  var selection = context.selection
+	var max = 4;
+  var min = 1;
+
+  for (var i = 0, l = [selection count]; i < l; i++) {
+    var layer = selection[i];
+		var avarage = ( Math.random() * max) ) + min;
+    layer.stringValue = String(avarage.toFixed(2));
+  }
+};
