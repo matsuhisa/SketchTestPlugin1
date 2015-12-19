@@ -1,0 +1,21 @@
+data = [
+"小上海 茶飯館",
+"Hotel Royal Chihpen",
+"忠誠號蚵仔煎",
+"Coffee Alley Shi Lin Store",
+"鼎泰豐 新竹店",
+"Chubby 勝利店",
+"天外天 台北西門",
+"W Taipei",
+"Happy Lemon 台北南西店",
+"天和鮮物 海島食堂旗艦店",
+"一口吃香腸（基隆廟口夜市）",
+"MAZENDO",
+"台芳",
+"榕樹下米粉湯",
+"Latest Recipe",
+"呷百二 三多店",
+"竹城　日式料理",
+"舒果 台北南京東店",
+"荘子茶房"
+]

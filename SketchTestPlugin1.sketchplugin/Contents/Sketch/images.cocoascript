@@ -2,30 +2,31 @@
 
 var onRun = function(context) {
   var selection = context.selection
-  var dataPath = 'data/photos/my-photos/';
-  var photosPath = '/Users/matsuhisahironobu/Library/Containers/com.bohemiancoding.sketch3/Data/Library/Application Support/com.bohemiancoding.sketch3/Plugins/SketchTestPlugin1/data/photo';
-
+  var data_path = 'data/photo/';
   var fileManager = [NSFileManager defaultManager];
 
-  //var scriptPath = context.scriptPath;
-  //var pluginFolder = scriptPath.match(/Plugins\/([\w -])*/)[0] + "/";
-  //var sketchPluginsPath = scriptPath.replace(/Plugins\/([\w -])*.sketchplugin$/, "");
-  //var imagesPath =  sketchPluginsPath + pluginFolder + dataPath;
-  //log("sketchPluginsPath:1:" + sketchPluginsPath + pluginFolder);
-  //log("sketchPluginsPath:2:" + sketchPluginsPath);
-  //var imagesFileNames = [fileManager contentsOfDirectoryAtPath:photosPath error:nil];
-  //var imageCount = [imagesFileNames count] -1;
+  var script_path = context.scriptPath;
+  var plugin_folder = script_path.match(/Plugins\/([\w -])*/)[0] + "/";
+  var sketch_plugins_path = script_path.replace(/Plugins\/([\w -])*\/([\w -])*.sketchplugin(.*)/, "");
+  var images_path =  sketch_plugins_path + plugin_folder + data_path;
 
-  //log(imagesFileNames);
-  var selections = [selection count];
-  log(selections);
+  var imagesFileNames = [fileManager contentsOfDirectoryAtPath:images_path error:nil];
+  var imageCount = [imagesFileNames count] - 1;
+
+  var selected_paths = [];
+
+  for(var i = 1; i < 100; i++){
+    var index = Math.floor(Math.random() * imageCount);
+    index = index >= imageCount ? 0 : index + 1;
+    var file_name = imagesFileNames[index];
+    var file_path = images_path + file_name;
+    selected_paths.push(file_path);
+  }
 
   for(var i = 0; i < [selection count]; i++){
-var imagePath = photosPath + "/1.jpg";
-var image = [[NSImage alloc] initWithContentsOfFile:imagePath];
-var layer = selection[i];
-
-  log(i);
+    var layer = selection[i];
+    log(selected_paths[i]);
+    var image = [[NSImage alloc] initWithContentsOfFile:selected_paths[i]];
 
     if([layer class] == MSShapeGroup){
       var fill = layer.style().fills().firstObject();

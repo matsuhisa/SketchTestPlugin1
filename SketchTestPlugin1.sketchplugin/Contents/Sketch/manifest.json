@@ -13,14 +13,14 @@
       "script" : "images.cocoascript",
       "handler" : "onRun",
       "shortcut" : "",
-      "name" : "Photos",
+      "name" : "写真をランダムで設定",
       "identifier" : "script2"
     },
 
     {
       "script" : "random_test.cocoascript",
       "handler" : "onRun",
-      "shortcut" : "",
+      "shortcut" : "名前をランダムで設定",
       "name" : "RandomTest",
       "identifier" : "script3"
     },
@@ -29,39 +29,31 @@
       "script" : "revew_average_star.cocoascript",
       "handler" : "onRun",
       "shortcut" : "",
-      "name" : "Revew average",
+      "name" : "1〜5段階の★を設定",
       "identifier" : "script4"
     },
-
   ],
 
   "menu": {
     "items": [
       {
-        "title": "Japanease",
+        "title": "テキストの設定",
         "items": [
-          "script1"
+          "script1", "script3"
         ],
       },
 
       {
-        "title": "Japanease Random",
-        "items": [
-          "script3"
-        ],
-      },
-
-      {
-        "title": "Revew average",
-        "items": [
-          "script4"
-        ],
-      },
-
-      {
-        "title": "Set image",
+        "title": "画像の設定",
         "items": [
           "script2"
+        ],
+      },
+
+      {
+        "title": "レビューの設定",
+        "items": [
+          "script4"
         ],
       }
     ],
