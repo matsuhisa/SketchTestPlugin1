@@ -64,6 +64,14 @@
       "name" : "1.00〜5.00の値を設定",
       "identifier" : "script6"
     },
+
+    {
+      "script" : "date.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "日付",
+      "identifier" : "script8"
+    },
   ],
 
   "menu": {
@@ -86,6 +94,13 @@
         "title": "レビューの設定",
         "items": [
           "script4", "script5", "script6"
+        ],
+      },
+
+      {
+        "title": "日付",
+        "items": [
+          "script8"
         ],
       }
     ],
