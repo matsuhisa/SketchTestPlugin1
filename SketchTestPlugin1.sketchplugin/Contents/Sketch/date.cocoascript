@@ -4,5 +4,14 @@ var onRun = function(context) {
   var selection = context.selection
 
   for (var i = 0, l = [selection count]; i < l; i++) {
+
+    var layer = selection[i];
+
+    var today = new Date();
+    var month = today.getMonth()+1;
+    var day   = today.getDate();
+    var year  = today.getFullYear();
+
+    layer.stringValue = year + "年" + month + "月" + day + "日";
   }
 };
