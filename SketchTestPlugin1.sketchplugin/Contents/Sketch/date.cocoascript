@@ -7,7 +7,16 @@ var onRun = function(context) {
 
     var layer = selection[i];
 
-    var today = new Date();
+    var datetime_from = "2010/01/01 10:00:00";
+    var datetime_to   = "2015/10/01 10:00:00";
+
+    var unixtime_from = Date.parse(datetime_from) / 100000;
+    var unixtime_to   = Date.parse(datetime_to) / 100000;
+    var unixtime_between = unixtime_to - unixtime_from;
+
+    var unixtime_current = Math.floor((Math.random() * (unixtime_between + 1)) + unixtime_from);
+    var today = new Date(unixtime_current * 100000);
+
     var month = today.getMonth()+1;
     var day   = today.getDate();
     var year  = today.getFullYear();
